@@ -112,6 +112,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IsReservedAddressTests\ReservedNetwork4Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork3Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork2Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork1Tests.cs" />
     <Compile Include="IsReservedAddressTests\ReservedNetworkTestsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
