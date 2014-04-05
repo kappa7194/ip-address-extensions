@@ -17,7 +17,7 @@
             return
                 IPAddressExtensions.GetNetworkAddress(
                     address,
-                    IPAddressExtensions.BitsToMask(maskBits));
+                    IPAddressExtensions.MaskBitsToMask(maskBits));
         }
 
         public static IPAddress GetNetworkAddress(
@@ -44,7 +44,7 @@
             return
                 IPAddressExtensions.GetBroadcastAddress(
                     address,
-                    IPAddressExtensions.BitsToMask(maskBits));
+                    IPAddressExtensions.MaskBitsToMask(maskBits));
         }
 
         public static IPAddress GetBroadcastAddress(
@@ -74,7 +74,7 @@
                 IPAddressExtensions.IsInSameNetworkAs(
                     firstAddress,
                     secondAddress,
-                    IPAddressExtensions.BitsToMask(maskBits));
+                    IPAddressExtensions.MaskBitsToMask(maskBits));
         }
 
         public static bool IsInSameNetworkAs(
@@ -94,7 +94,7 @@
                     .GetNetworkAddress(mask));
         }
 
-        public static IPAddress BitsToMask(byte bits)
+        public static IPAddress MaskBitsToMask(byte bits)
         {
             Contract.Ensures(Contract.Result<IPAddress>() != null);
 
