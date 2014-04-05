@@ -7,6 +7,38 @@
 
     public static class IPAddressExtensions
     {
+        private static readonly Network[] ReservedNetworks =
+        {
+            new Network("0.0.0.0", 8),
+            new Network("10.0.0.0", 8),
+            new Network("100.64.0.0", 10),
+            new Network("127.0.0.0", 8),
+            new Network("169.254.0.0", 16),
+            new Network("172.16.0.0", 12),
+            new Network("192.0.0.0", 29),
+            new Network("192.0.2.0", 24),
+            new Network("192.88.99.0", 24),
+            new Network("192.168.0.0", 16),
+            new Network("198.18.0.0", 15),
+            new Network("198.51.100.0", 24),
+            new Network("203.0.113.0", 24),
+            new Network("224.0.0.0", 4),
+            new Network("240.0.0.0", 4),
+            new Network("255.255.255.255", 32),
+            new Network("::", 128),
+            new Network("::1", 128),
+            new Network("::ffff:0:0", 96),
+            new Network("100::", 64),
+            new Network("64:ff9b::", 96),
+            new Network("2001::", 32),
+            new Network("2001:10::", 28),
+            new Network("2001:db8::", 32),
+            new Network("2002::", 16),
+            new Network("fc00::", 7),
+            new Network("fe80::", 10),
+            new Network("ff00::", 8)
+        };
+
         public static IPAddress GetNetworkAddress(
             this IPAddress address,
             byte maskBits)
@@ -92,6 +124,11 @@
                 .Equals(
                     secondAddress
                     .GetNetworkAddress(mask));
+        }
+
+        public static bool IsReservedAddress(this IPAddress address)
+        {
+            return ReservedNetworks.Any(n => address.IsInSameNetworkAs(n.Address, n.Mask));
         }
 
         public static IPAddress MaskBitsToMask(byte bits)
