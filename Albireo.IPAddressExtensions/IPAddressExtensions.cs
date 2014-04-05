@@ -62,6 +62,38 @@
                     (a, m) => (byte) (a | m ^ 255));
         }
 
+        public static bool IsInSameNetworkAs(
+            this IPAddress firstAddress,
+            IPAddress secondAddress,
+            byte maskBits)
+        {
+            Contract.Requires<ArgumentNullException>(firstAddress != null);
+            Contract.Requires<ArgumentNullException>(secondAddress != null);
+
+            return
+                IPAddressExtensions.IsInSameNetworkAs(
+                    firstAddress,
+                    secondAddress,
+                    IPAddressExtensions.BitsToMask(maskBits));
+        }
+
+        public static bool IsInSameNetworkAs(
+            this IPAddress firstAddress,
+            IPAddress secondAddress,
+            IPAddress mask)
+        {
+            Contract.Requires<ArgumentNullException>(firstAddress != null);
+            Contract.Requires<ArgumentNullException>(secondAddress != null);
+            Contract.Requires<ArgumentNullException>(mask != null);
+
+            return
+                firstAddress
+                .GetNetworkAddress(mask)
+                .Equals(
+                    secondAddress
+                    .GetNetworkAddress(mask));
+        }
+
         public static IPAddress BitsToMask(byte bits)
         {
             Contract.Ensures(Contract.Result<IPAddress>() != null);
