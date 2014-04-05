@@ -135,9 +135,14 @@
         {
             Contract.Ensures(Contract.Result<IPAddress>() != null);
 
-            var mask = string.Empty.PadRight(bits, '1').PadRight(32, '0');
-            var maskValue = Convert.ToInt32(mask, 2);
-            var maskBytes = BitConverter.GetBytes(maskValue).Reverse().ToArray();
+            var maskLength = bits > 32 ? 16 : 4;
+            var maskBytes = new byte[maskLength];
+
+            for (int i = 0; i < maskLength; i++)
+            {
+                maskBytes[i] = unchecked((byte) (bits >= 8 ? 255 : 255 << (8 - bits)));
+                bits = (byte) (bits > 8 ? bits - 8 : 0);
+            }
 
             return new IPAddress(maskBytes);
         }
