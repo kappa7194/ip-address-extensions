@@ -128,7 +128,11 @@
 
         public static bool IsReservedAddress(this IPAddress address)
         {
-            return ReservedNetworks.Any(n => address.IsInSameNetworkAs(n.Address, n.Mask));
+            return
+                ReservedNetworks
+                .Any(n =>
+                    n.Address.AddressFamily == address.AddressFamily
+                    && address.IsInSameNetworkAs(n.Address, n.Mask));
         }
 
         public static IPAddress MaskBitsToMask(byte bits)
