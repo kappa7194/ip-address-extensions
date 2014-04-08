@@ -1,6 +1,8 @@
 ﻿# IP address extensions
 
-_TODO_
+This .NET library contains various extensions for the `IPAddress` class.
+
+A NuGet package is available at https://www.nuget.org/packages/Albireo.IPAddressExtensions/
 
 ## Requirements
 
