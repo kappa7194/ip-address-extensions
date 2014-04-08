@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Albireo's IPAddress extensions library</title>
+    <authors>$author$</authors>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <summary>A library with useful extension for IPAddress-es manipulations.</summary>
+    <projectUrl>https://github.com/kappa7194/ip-address-extensions</projectUrl>
+    <iconUrl>http://i.imgur.com/PUv3ba2.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/kappa7194/ip-address-extensions/master/LICENSE.txt</licenseUrl>
+    <copyright>Copyright © 2014 Albireo</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags></tags>
+  </metadata>
+</package>
