@@ -112,10 +112,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IsReservedAddressTests\ReservedNetwork4Tests.cs" />
-    <Compile Include="IsReservedAddressTests\ReservedNetwork3Tests.cs" />
-    <Compile Include="IsReservedAddressTests\ReservedNetwork2Tests.cs" />
-    <Compile Include="IsReservedAddressTests\ReservedNetwork1Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork14Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork13Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork12Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork11Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork10Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork09Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork08Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork07Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork06Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork05Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork04Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork03Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork02Tests.cs" />
+    <Compile Include="IsReservedAddressTests\ReservedNetwork01Tests.cs" />
     <Compile Include="IsReservedAddressTests\ReservedNetworkTestsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
