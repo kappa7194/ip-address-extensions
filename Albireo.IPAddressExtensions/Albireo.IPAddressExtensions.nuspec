@@ -13,6 +13,6 @@
     <licenseUrl>https://raw.githubusercontent.com/kappa7194/ip-address-extensions/master/LICENSE.txt</licenseUrl>
     <copyright>Copyright © 2014 Albireo</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags></tags>
+    <tags>ipaddress</tags>
   </metadata>
 </package>
